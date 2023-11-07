@@ -1,7 +1,9 @@
 
 import { HitEnterTo } from '../hit-enter-to/hit-enter-to'; export interface UserPreviewCardProps {
     className?: string;
-    children?: React.ReactNode;
+    name: string;
+    profilePicture: string;
+    showHitEnterTo?: boolean
 }
 
 /**
@@ -9,11 +11,14 @@ import { HitEnterTo } from '../hit-enter-to/hit-enter-to'; export interface User
  * For details on how to create custom new component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const UserPreviewCard = ({
-    children = 'Jan Wirth',
+    name = 'Jan Wirth',
+    profilePicture,
+    showHitEnterTo = false
+
 }: UserPreviewCardProps) => {
-    return <div className="flex items-center gap-1 w-full h-12 bg-gray-100 text-black rounded-lg p-2">
-        <div className="w-8 h-8 rounded-full flex items-center justify-center text-lg bg-purple-300"></div>
-        <div className="grow w-0 whitespace-nowrap overflow-hidden text-ellipsis mr-1">{children}</div>
-        <div className="opacity-40"><HitEnterTo /></div>
+    return <div className="flex items-center gap-1.5 w-full h-12 bg-gray-100 text-black rounded-lg p-2">
+        <img src={profilePicture} className="w-8 h-8 rounded-full flex items-center justify-center text-lg bg-purple-300"></img>
+        <div className="grow w-0 whitespace-nowrap overflow-hidden text-ellipsis mr-0.5">{name}</div>
+        {showHitEnterTo && <div className="opacity-40"><HitEnterTo> to select </HitEnterTo></div>}
     </div>;
 };
