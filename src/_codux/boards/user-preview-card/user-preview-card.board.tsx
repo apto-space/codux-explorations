@@ -1,9 +1,9 @@
 import { createBoard } from '@wixc3/react-board';
-import { CreateNewPersonButton } from '../../../components/create-new-person-button/create-new-person-button';
+import { UserPreviewCard } from '../../../components/user-preview-card/user-preview-card';
 
 export default createBoard({
-    name: 'CreateNewPersonButton',
-    Board: () => <CreateNewPersonButton />,
+    name: 'UserPreviewCard',
+    Board: () => <UserPreviewCard />,
     isSnippet: true,
     environmentProps: {
         windowWidth: 375,
