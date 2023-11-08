@@ -16,7 +16,7 @@ export const SelectAPersonButton = ({
             <AtSignIcon />
         </div>
 
-        Select a person<div />
+        Select or create a person<div />
     </div>;
 };
 
