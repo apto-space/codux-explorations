@@ -10,7 +10,8 @@ export interface SelectedOrCreatedPersonLoadingProps {
 export const SelectedOrCreatedPersonLoading = ({
     children = 'Jan Wirth',
 }: SelectedOrCreatedPersonLoadingProps) => {
-    return <div className="text-center flex w-full h-2">
-        <div />
-        {children}</div>;
+    return <div className="flex items-center gap-1.5 bg-gray-50 rounded-lg p-2 w-full">
+        <div className="animate-pulse bg-gray-200 rounded-full w-8 h-8" />
+        <div className="animate-pulse bg-gray-200 w-20 h-4 rounded-full"></div>
+    </div>;
 };
