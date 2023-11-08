@@ -11,7 +11,7 @@ import { AtSignIcon } from '../at-sign-icon/at-sign-icon'; export interface Sele
 export const SelectAPersonButton = ({
     children = 'SelectAPersonButton',
 }: SelectAPersonButtonProps) => {
-    return <div className="flex gap-1.5 items-center text-purple-900 text-md bg-purple-100 p-3 rounded-md">
+    return <div className="flex gap-1.5 items-center text-purple-900 text-md bg-purple-100 p-2 rounded-md">
         <div className="w-8 h-8 flex items-center justify-center bg-purple-300 rounded-md">
             <AtSignIcon />
         </div>
