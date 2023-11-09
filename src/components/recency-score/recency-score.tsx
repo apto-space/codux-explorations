@@ -14,6 +14,8 @@ export const RecencyScore = ({ one_to_three: one_to_three_, animate }: { one_to_
 //   const [isOpen, setIsOpen] = useState(false);
 console.log('input', one_to_three_)
   const [one_to_three, setNum] = useState(animate ? 1 : one_to_three_)
+
+  useEffect(() => {setNum(one_to_three_)}, [one_to_three_])
   useEffect(() => {
     if (animate) {
     A.range(1, one_to_three_).forEach((num) => setTimeout(() => setNum(num) , (num-1) * 700))
