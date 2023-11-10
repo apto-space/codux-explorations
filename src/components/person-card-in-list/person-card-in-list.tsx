@@ -1,5 +1,6 @@
-
-import { NoteStatusWithTotal } from '../note-status-with-total/note-status-with-total'; export interface PersonCardInListProps {
+import { NoteStatusWithTotal } from '../note-status-with-total/note-status-with-total';
+import { RecencyScore } from '../recency-score/recency-score';
+export interface PersonCardInListProps {
     className?: string;
     children?: React.ReactNode;
 }
@@ -11,12 +12,17 @@ import { NoteStatusWithTotal } from '../note-status-with-total/note-status-with-
 export const PersonCardInList = ({
     children = 'PersonCardInList',
 }: PersonCardInListProps) => {
-    return <div className="flex items-center gap-2 w-full p-2 rounded-md bg-gray-100">
-        <div>
-            <div className="flex items-center gap-2">
-                <div className="bg-gray-200 rounded-full w-10 h-10"></div></div></div>
-        <div>Jan Wirth
-            <NoteStatusWithTotal />
+    return (
+        <div className="flex w-full items-center gap-2  rounded-md bg-gray-100 p-2">
+            <div className="h-10 w-10 rounded-full bg-gray-200"></div>
+            <div className="grow">
+                <div className="flex w-full">
+                    <div className="w-full text-left">Jan Wirth</div>
+                    <RecencyScore one_to_three={2} />
+                </div>
+
+                <NoteStatusWithTotal />
+            </div>
         </div>
-    </div>;
+    );
 };
