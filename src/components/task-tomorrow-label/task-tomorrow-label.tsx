@@ -10,7 +10,7 @@ export interface TaskTomorrowLabelProps {
 export const TaskTomorrowLabel = ({
     children = 'TaskTomorrowLabel',
 }: TaskTomorrowLabelProps) => {
-    return <div className="bg-orange-100 text-orange-600 w-min whitespace-nowrap pl-2 pr-2 rounded-md">
+    return <div className="text-sm bg-orange-100 text-orange-600 w-min whitespace-nowrap pl-2 pr-2 rounded-md">
             Tomorrow
         </div>;
 };
