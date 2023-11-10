@@ -13,15 +13,14 @@ export const RecencyScoreWithTooltip = ({
     one_to_three, refreshed,
 }: RecencyScoreWithTooltipProps) => {
     return <div>
-    <Tooltip>
-    <TooltipTrigger>
-        <RecencyScore one_to_three={one_to_three} refreshed={refreshed}/>
-        </TooltipTrigger>
-        <TooltipContent>
-         TOOLTIP CONTENT
+        <Tooltip>
+            <TooltipTrigger>
+                <RecencyScore one_to_three={one_to_three} refreshed={refreshed} />
+            </TooltipTrigger>
+            <TooltipContent>
+                <RecencyScore1TooltipContent score={one_to_three}/>
 
-        </TooltipContent>
-        </Tooltip>
+            </TooltipContent></Tooltip>
     </div>;
 };
 
@@ -33,6 +32,7 @@ import {
     flip,
     shift,
     useHover,
+    useClick,
     useFocus,
     useDismiss,
     useRole,
@@ -42,6 +42,7 @@ import {
 } from "@floating-ui/react";
 import type { Placement } from "@floating-ui/react";
 import { RecencyScore } from '../recency-score/recency-score';
+import { RecencyScore1TooltipContent } from '../recency-score-1-tooltip-content/recency-score-1-tooltip-content';
 
 interface TooltipOptions {
     initialOpen?: boolean;
@@ -79,8 +80,9 @@ export function useTooltip({
 
     const context = data.context;
 
-    const hover = useHover(context, {
-        move: false,
+    const hover = useClick(context, {
+        // move: false,
+
         enabled: controlledOpen == null
     });
     const focus = useFocus(context, {
