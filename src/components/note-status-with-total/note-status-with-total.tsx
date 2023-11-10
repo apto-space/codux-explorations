@@ -1,5 +1,5 @@
 
-import { NoteStatusWaitingForInput } from '../note-status-waiting-for-input/note-status-waiting-for-input'; export interface NoteStatusWithTotalProps {
+import { NoteStatusSaved } from '../note-status-saved/note-status-saved'; export interface NoteStatusWithTotalProps {
     className?: string;
     children?: React.ReactNode;
 }
@@ -12,6 +12,6 @@ export const NoteStatusWithTotal = ({
     children = '1 note • 0 tasks',
 }: NoteStatusWithTotalProps) => {
     return <div className="text-center w-full flex gap-3">
-        <NoteStatusWaitingForInput />
+        <NoteStatusSaved />
         <div className="text-gray-400">1 note • 0 tasks</div></div>;
 };

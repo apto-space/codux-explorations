@@ -1,4 +1,5 @@
-export interface RecencyScore1TooltipContentProps {
+
+import { RecencyScore3Label } from '../recency-score-3-label/recency-score-3-label'; export interface RecencyScore1TooltipContentProps {
     className?: string;
     children?: React.ReactNode;
 }
@@ -10,9 +11,7 @@ export interface RecencyScore1TooltipContentProps {
 export const RecencyScore1TooltipContent = ({
     children = 'Getting closer',
 }: RecencyScore1TooltipContentProps) => {
-    return <div className="p-2 rounded-md inline-block bg-white shadow-lg ">
-        <div className="align-middle bg-green-50 text-green-600 items-center inline-block pl-2 pr-2 rounded-md mb-1">
-            Getting closer
-        </div><div>You interacted yesterday</div>
+    return <div className="flex flex-col gap-1.5 p-3 rounded-md w-min whitespace-nowrap bg-white shadow-lg">
+        <RecencyScore3Label /><div>You interacted yesterday</div>
     </div>;
 };
