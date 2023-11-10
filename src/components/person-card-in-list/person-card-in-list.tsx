@@ -14,7 +14,7 @@ export const PersonCardInList = ({
     children = 'PersonCardInList',
 }: PersonCardInListProps) => {
     return (
-        <div className="flex w-full items-center gap-2  rounded-md bg-gray-100 p-2">
+        <button onClick={() => console.log('outer')} className="flex w-full items-center gap-2  rounded-md bg-gray-100 p-2">
             <div className="h-10 w-10 rounded-full bg-gray-200"></div>
             <div className="grow">
                 <div className="flex w-full">
@@ -25,6 +25,6 @@ export const PersonCardInList = ({
 
                 <NoteStatusWithTotal />
             </div>
-        </div>
+        </button>
     );
 };

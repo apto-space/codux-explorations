@@ -1,9 +1,14 @@
-
 import { TasksExtractedInNotes } from '../tasks-extracted-in-notes/tasks-extracted-in-notes';
-import { PersonCardInList } from '../person-card-in-list/person-card-in-list'; export interface PersonCardInNotesProps {
+import { PersonCardInList } from '../person-card-in-list/person-card-in-list';
+export interface PersonCardInNotesProps {
     className?: string;
     children?: React.ReactNode;
 }
+import {
+    Tooltip,
+    TooltipTrigger,
+    TooltipContent,
+} from '../recency-score-with-tooltip/recency-score-with-tooltip';
 
 /**
  * This component was generated using Codux's built-in Default new component template.
@@ -12,12 +17,20 @@ import { PersonCardInList } from '../person-card-in-list/person-card-in-list'; e
 export const PersonCardInNotes = ({
     children = 'PersonCardInNotes',
 }: PersonCardInNotesProps) => {
-    return <div className="bg-gray-100 rounded-md">
-        <div>
-            <PersonCardInList />
+    return (
+        <div className="rounded-md bg-gray-100">
+            <div>
+                <PersonCardInList />
+            </div>
+            <div className="p-2">
+                <Tooltip placement="bottom-start">
+                    <TooltipTrigger>
+                        <div>WHAT DOES IT LOOK LIKE WHEN NO TASKS WERE EXTRACTED</div>
+                        <TasksExtractedInNotes />
+                    </TooltipTrigger>
+                    <TooltipContent><div>TASKS HERE - REPLACE ME VICTORIA</div></TooltipContent>
+                </Tooltip>
+            </div>
         </div>
-        <div className="p-2">
-            <TasksExtractedInNotes />
-        </div>
-        </div>;
+    );
 };
