@@ -10,7 +10,7 @@ export default createBoard({
         return <div>
             <button onClick={() => setScore(true)}>refresh</button>
             <button onClick={() => setScore(false)}>reset</button>
-            <RecencyScore one_to_three={1} refreshed={refreshed} />
+            <RecencyScore one_to_three={0} refreshed={refreshed} />
             </div>
         },
     isSnippet: true,
