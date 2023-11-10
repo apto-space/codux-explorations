@@ -10,7 +10,7 @@ export interface TaskNoDueLabelProps {
 export const TaskNoDueLabel = ({
     children = 'TaskNoDueLabel',
 }: TaskNoDueLabelProps) => {
-    return <div className="bg-gray-100 text-gray-500 w-min whitespace-nowrap pl-2 pr-2 rounded-md">
+    return <div className="text-sm bg-gray-100 text-gray-500 w-min whitespace-nowrap pl-2 pr-2 rounded-md">
             No due
         </div>;
 };
