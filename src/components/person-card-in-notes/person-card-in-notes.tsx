@@ -9,6 +9,7 @@ import {
     TooltipTrigger,
     TooltipContent,
 } from '../recency-score-with-tooltip/recency-score-with-tooltip';
+import { TasksTooltip } from '../tasks-tooltip/tasks-tooltip';
 
 /**
  * This component was generated using Codux's built-in Default new component template.
@@ -25,10 +26,12 @@ export const PersonCardInNotes = ({
             <div className="p-2">
                 <Tooltip placement="bottom-start">
                     <TooltipTrigger>
-                        <div>WHAT DOES IT LOOK LIKE WHEN NO TASKS WERE EXTRACTED</div>
+                        <div></div>
                         <TasksExtractedInNotes />
                     </TooltipTrigger>
-                    <TooltipContent><div>TASKS HERE - REPLACE ME VICTORIA</div></TooltipContent>
+                    <TooltipContent>
+            <TasksTooltip />
+                    </TooltipContent>
                 </Tooltip>
             </div>
         </div>

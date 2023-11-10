@@ -13,7 +13,7 @@ export const RecencyScoreWithTooltip = ({
     one_to_three, refreshed,
 }: RecencyScoreWithTooltipProps) => {
     return <div>
-        <Tooltip>
+        <Tooltip placement="bottom-end">
             <TooltipTrigger>
                 <RecencyScore one_to_three={one_to_three} refreshed={refreshed} />
             </TooltipTrigger>
