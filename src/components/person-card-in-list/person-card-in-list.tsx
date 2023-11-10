@@ -1,5 +1,6 @@
 import { NoteStatusWithTotal } from '../note-status-with-total/note-status-with-total';
 import { RecencyScore } from '../recency-score/recency-score';
+import { RecencyScoreWithTooltip } from '../recency-score-with-tooltip/recency-score-with-tooltip';
 export interface PersonCardInListProps {
     className?: string;
     children?: React.ReactNode;
@@ -18,7 +19,8 @@ export const PersonCardInList = ({
             <div className="grow">
                 <div className="flex w-full">
                     <div className="w-full text-left">Jan Wirth</div>
-                    <RecencyScore one_to_three={2} />
+
+                    <RecencyScoreWithTooltip one_to_three={2} />
                 </div>
 
                 <NoteStatusWithTotal />
