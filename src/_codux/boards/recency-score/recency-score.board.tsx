@@ -1,6 +1,6 @@
 import { createBoard } from '@wixc3/react-board';
 import { RecencyScore } from '../../../components/recency-score/recency-score';
-import {useState} from "react"
+import { useState } from "react"
 
 export default createBoard({
     name: 'RecencyScore',
@@ -10,9 +10,9 @@ export default createBoard({
         return <div>
             <button onClick={() => setScore(true)}>refresh</button>
             <button onClick={() => setScore(false)}>reset</button>
-            <RecencyScore one_to_three={0} refreshed={refreshed} />
-            </div>
-        },
+            <RecencyScore one_to_three={2} refreshed={refreshed} />
+        </div>
+    },
     isSnippet: true,
     environmentProps: {
         canvasWidth: 700,
