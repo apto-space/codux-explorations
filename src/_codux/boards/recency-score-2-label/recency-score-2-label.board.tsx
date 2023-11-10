@@ -5,4 +5,9 @@ export default createBoard({
     name: 'RecencyScore2Label',
     Board: () => <RecencyScore2Label />,
     isSnippet: true,
+    environmentProps: {
+        windowWidth: 375,
+        windowHeight: 667,
+        canvasWidth: 166
+    }
 });

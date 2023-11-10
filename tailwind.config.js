@@ -5,6 +5,9 @@ export default {
     fontFamily: { body: ["Outfit"], sans: ["Outfit"] },
 
     extend: {
+      boxShadow: {
+        'card': '0px 4px 50px 0px rgba(0, 0, 0, 0.10)',
+      },
       backgroundImage: {
         sunset:
           "var(--gradient-300, linear-gradient(90deg, #FF5D3F 20.24%, #FF144D 59.7%, #FE017A 100%))",

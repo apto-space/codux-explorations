@@ -3,7 +3,7 @@ import { RecencyScore1TooltipContent } from '../../../components/recency-score-1
 
 export default createBoard({
     name: 'RecencyScore1TooltipContent',
-    Board: () => <RecencyScore1TooltipContent />,
+    Board: () => <RecencyScore1TooltipContent score={3}/>,
     isSnippet: true,
     environmentProps: {
         windowWidth: 375,
