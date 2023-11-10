@@ -3,7 +3,7 @@ import { TasksExtractedInNotes } from '../../../components/tasks-extracted-in-no
 
 export default createBoard({
     name: 'TasksExtractedInNotes',
-    Board: () => <TasksExtractedInNotes />,
+    Board: () => <TasksExtractedInNotes new_tasks_found={[{label: "Call Kate", due_date: new Date()}]} />,
     isSnippet: true,
     environmentProps: {
         windowWidth: 375,

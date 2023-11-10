@@ -1,7 +1,9 @@
 
-import { TaskToday } from '../task-today/task-today'; export interface TasksTooltipProps {
-    className?: string;
-    children?: React.ReactNode;
+import { TaskToday as Task, NewTaskFound, OnDismissTask } from '../task-today/task-today';
+import { TasksExtractedInNotes, TasksExtractedInNotesProps } from '../tasks-extracted-in-notes/tasks-extracted-in-notes';
+export interface TasksTooltipProps {
+    tasks: NewTaskFound[];
+    onDismiss: OnDismissTask
 }
 
 /**
@@ -9,14 +11,10 @@ import { TaskToday } from '../task-today/task-today'; export interface TasksTool
  * For details on how to create custom new component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const TasksTooltip = ({
-    children = 'TasksTooltip',
+    tasks,
+    onDismiss
 }: TasksTooltipProps) => {
-    return <div className="flex flex-col gap-1.5 p-2 rounded-lg shadow-card">
-        <div>
-            <TaskToday />
-        </div>
-        <div>
-            <TaskToday />
-        </div>
+    return <div className="flex flex-col gap-1.5 p-2 rounded-lg shadow-card bg-white">
+        {tasks.map(task => <Task onDismiss={onDismiss} key={task.label} task={task}/>)}
     </div>;
 };

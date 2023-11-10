@@ -10,7 +10,7 @@ export interface NoteStatusWaitingForInputProps {
 export const NoteStatusWaitingForInput = ({
     children = 'Waiting for input',
 }: NoteStatusWaitingForInputProps) => {
-    return <div className="flex items-center text-purple-900 gap-0">
+    return <div className="flex items-center text-purple-900 gap-0  animate-pulse">
         <div />
         <svg width="14" height="14" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0_12033_35003)">

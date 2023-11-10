@@ -184,6 +184,7 @@ export const TooltipContent = React.forwardRef<
                     ...context.floatingStyles,
                     ...style
                 }}
+                className="z-40 relative"
                 {...context.getFloatingProps(props)}
             />
         </FloatingPortal>
