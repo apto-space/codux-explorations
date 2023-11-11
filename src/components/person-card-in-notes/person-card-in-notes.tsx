@@ -98,7 +98,7 @@ export const PersonCardInNotes = ({
             <div>
                 <PersonCardInList {...rest} />
             </div>
-            {new_tasks_found && (
+            {new_tasks_found.length > 0 && (
                 <div className="p-2">
                     <Tooltip placement="bottom-start">
                         <TooltipTrigger>
