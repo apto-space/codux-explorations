@@ -16,6 +16,7 @@ export const exampleProps: PersonCardInNotesProps = {
     save_status: 'waiting_for_input',
     name: "Janniboy Wirthi",
     recency_score: 2,
+    refreshed: true,
     new_tasks_found: [
         {
             label: 'Feed the cat',

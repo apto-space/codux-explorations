@@ -1,5 +1,5 @@
 export interface RecencyScoreProps {
-    one_to_three: number;
+    recency_score: number;
     refreshed?: boolean;
 }
 import {useTransition, useSpring, animated} from "@react-spring/web"
@@ -10,7 +10,7 @@ import {A} from "@mobily/ts-belt"
  * This component was generated using Codux's built-in Default new component template.
  * For details on how to create custom new component templates, see https://help.codux.com/kb/en/article/kb16522
  */
-export const RecencyScore = ({ one_to_three: one_to_three_, refreshed }: RecencyScoreProps) => {
+export const RecencyScore = ({ recency_score: one_to_three_, refreshed }: RecencyScoreProps) => {
   const animate = refreshed
 
   const [one_to_three, setNum] = useState(one_to_three_)

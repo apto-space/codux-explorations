@@ -1,7 +1,7 @@
 export interface RecencyScoreWithTooltipProps {
     // className?: string;
     // children?: React.ReactNode;
-    one_to_three: number;
+    recency_score: number;
     refreshed?: boolean;
 }
 
@@ -10,15 +10,15 @@ export interface RecencyScoreWithTooltipProps {
  * For details on how to create custom new component templates, see https://help.codux.com/kb/en/article/kb16522
  */
 export const RecencyScoreWithTooltip = ({
-    one_to_three, refreshed,
+    recency_score, refreshed,
 }: RecencyScoreWithTooltipProps) => {
     return <div>
         <Tooltip placement="bottom-end">
             <TooltipTrigger>
-                <RecencyScore one_to_three={one_to_three} refreshed={refreshed} />
+                <RecencyScore recency_score={recency_score} refreshed={refreshed} />
             </TooltipTrigger>
             <TooltipContent>
-                <RecencyScore1TooltipContent score={one_to_three}/>
+                <RecencyScore1TooltipContent recency_score={recency_score} refreshed={refreshed}/>
 
             </TooltipContent></Tooltip>
     </div>;
