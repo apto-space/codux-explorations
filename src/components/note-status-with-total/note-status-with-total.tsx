@@ -8,7 +8,7 @@ export interface NoteStatusWithTotalProps {
     save_status?: SaveStatus;
 }
 
-export type SaveStatus = 'waiting_for_input' | 'saving' | 'saved';
+export type SaveStatus = 'waiting_for_input' | 'saving' | 'saved' | 'saving_failed';
 /**
  * This component was generated using Codux's built-in Default new component template.
  * For details on how to create custom new component templates, see https://help.codux.com/kb/en/article/kb16522
@@ -22,7 +22,6 @@ export const NoteStatusWithTotal = ({
 }: NoteStatusWithTotalProps) => {
     return (
         <div className="flex gap-3">
-            {save_status == 'saved' && <NoteStatusSaved />}
             {save_status == 'saved' && <NoteStatusSaved />}
             {save_status == 'saving' && <NoteStatusSaving />}
             {save_status == 'waiting_for_input' && <NoteStatusWaitingForInput />}

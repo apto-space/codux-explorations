@@ -13,7 +13,7 @@ export const exampleProps: PersonCardInNotesProps = {
     note_count: 2,
     task_count: 1,
     profilePicture: "https://source.boringavatars.com/beam/64/example?colors=E6E8E3,DEE1E4,DCDEE4,C6CBCD,CDD4D6",
-    save_status: 'waiting_for_input',
+    save_status: 'saved',
     name: "Janniboy Wirthi",
     recency_score: 2,
     refreshed: true,
